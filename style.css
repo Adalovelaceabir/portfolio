@@ -1,4 +1,4 @@
-<style>
+/* Global Styles */
 :root {
     --primary-color: #3498db;
     --secondary-color: #2c3e50;
@@ -688,4 +688,4 @@ footer {
     .about-info {
         flex-direction: column;
     }
-}
+    }
