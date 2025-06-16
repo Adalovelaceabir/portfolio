@@ -105,7 +105,7 @@ header {
     width: 100%;
     z-index: 1000;
     background-color: var();
-    box-shadow: var(--box-shadow);
+    box-shadow: var();
     transition: var(--transition);
 }
 
