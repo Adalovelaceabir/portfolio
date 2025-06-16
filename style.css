@@ -97,28 +97,6 @@ section {
     color: var(--white);
 }
 
-/* Add this at the END of your styles.css file */
-header {
-    background: transparent !important;
-    box-shadow: none !important;
-}
-
-header.scrolled {
-    background: transparent !important;
-    box-shadow: none !important;
-}
-
-nav {
-    background: transparent !important;
-}
-
-/* For mobile menu */
-@media (max-width: 768px) {
-    .nav-links {
-        background: transparent !important;
-    }
-}
-
 nav {
     display: flex;
     justify-content: space-between;
