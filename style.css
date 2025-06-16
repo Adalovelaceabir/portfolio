@@ -98,21 +98,23 @@ section {
 }
 
 /* Header Styles */
+/* For a modern glass/morphism effect */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: transparent !important; /* Force transparency */
-    box-shadow: none !important; /* Remove shadow */
+    background: rgba(255, 255, 255, 0.1) !important; /* Semi-transparent */
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
 
 header.scrolled {
-    padding: 10px 0;
-    background-color: transparent !important; /* Keep transparent when scrolled */
-}
+    background: rgba(255, 255, 255, 0.9) !important; /* More opaque when scrolled */
+                          }
 
 nav {
     display: flex;
