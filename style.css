@@ -107,12 +107,12 @@ header {
     z-index: 1000;
     background-color: transparent !important; /* Force transparency */
     box-shadow: none !important; /* Remove shadow */
-    transition: var(--transition);
+    transition: none (--transition);
 }
 
 header.scrolled {
     padding: 10px 0;
-    background-color: transparent !important; /* Keep transparent when scrolled */
+    background-color: none !important; /* Keep transparent when scrolled */
 }
 @media (max-width: 768px) {
     .nav-links {
