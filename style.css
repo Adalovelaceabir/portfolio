@@ -97,26 +97,25 @@ section {
     color: var(--white);
 }
 
-/* Header Styles */
-/* Replace the existing header styles with this: */
+/* Add this at the END of your styles.css file */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: transparent !important; /* Force transparency */
-    box-shadow: none !important; /* Remove shadow */
-    transition: none (--transition);
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 header.scrolled {
-    padding: 10px 0;
-    background-color: none !important; /* Keep transparent when scrolled */
+    background: transparent !important;
+    box-shadow: none !important;
 }
+
+nav {
+    background: transparent !important;
+}
+
+/* For mobile menu */
 @media (max-width: 768px) {
     .nav-links {
-        background-color: var(--none) !important;
+        background: transparent !important;
     }
 }
 
