@@ -148,3 +148,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', animateOnScroll);
 });
+
+// Add this to your script.js file
+document.addEventListener('DOMContentLoaded', function() {
+    // Force remove header background
+    const header = document.querySelector('header');
+    header.style.background = 'transparent';
+    header.style.boxShadow = 'none';
+    
+    // Remove any inline styles that might be overriding
+    header.removeAttribute('style');
+    
+    // For mobile menu
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks) {
+        navLinks.style.background = 'transparent';
+    }
+});
