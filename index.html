@@ -418,42 +418,42 @@
             </div>
         </div>
 
-        <footer>
-  <div class="footer-bottom">
-    <p>&copy;Ada Lovelace Abir. All rights Reserved.</p>
+ <!-- 🔒 Stylish Footer -->
+  <footer>
+    <p id="cpr"></p>
+  </footer>
+
+  <!-- ❗ Tamper Warning -->
+  <div id="error">⚠️ Do not remove or modify the copyright notice!</div>
+
+  <!-- 🚫 Full Page Blocker -->
+  <div id="blocker">
+    ⚠️ Access Denied<br>Copyright information is missing or modified.
   </div>
-  <div id="error" style="display:none; color:red; font-weight:bold;">
-    ⚠️ Copyright Notice Missing or Tampered!
-  </div>
-</footer>
 
-<div id="blocker" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; color:white; font-size:24px; justify-content:center; align-items:center;">
-  ⚠️ Website disabled due to copyright tampering.
-</div>
+  <script>
+    const encoded = "Q29weXJpZ2h0IMKpIDIwMjUgPGEgaHJlZj0iaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL0NTRS5TY2llbnRpc3RBYmlyIiB0YXJnZXQ9Il9ibGFuayIgc3R5bGU9ImZvbnQtd2VpZ2h0OmJvbGQ7IGNvbG9yOiAjNGVhM2ZmOyI+QWRhIExvdmVsYWNlIEFiaXI8L2E+IC0gQWxsIFJpZ2h0cyBSZXNlcnZlZA==";
+    const decoded = atob(encoded);
+    const cprElement = document.getElementById("cpr");
+    cprElement.innerHTML = decoded;
 
-<script>
-  const encoded = "Q29weXJpZ2h0IMKpIDIwMjUgPGEgaHJlZj0iaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL0NTRS5TY2llbnRpc3RBYmlyIiB0YXJnZXQ9Il9ibGFuayI+QWRhIExvdmVsYWNlIEFiaXI8L2E+";
-  const decoded = atob(encoded);
-  const cprElement = document.getElementById("cpr");
-  cprElement.innerHTML = decoded;
-
-  function checkTampering() {
-    const current = cprElement.innerHTML.trim();
-    const mustContain = [
-      "Ada Lovelace Abir",
-      "facebook.com/CSE.ScientistAbir"
-    ];
-    const tampered = mustContain.some(str => !current.includes(str));
-    if (tampered) {
-      document.getElementById("error").style.display = "block";
-      document.getElementById("blocker").style.display = "flex";
-      console.warn("⚠️ Copyright has been tampered!");
+    function checkTampering() {
+      const current = cprElement.innerHTML.trim();
+      const mustContain = [
+        "©",
+        "Ada Lovelace Abir",
+        "facebook.com/CSE.ScientistAbir"
+      ];
+      const tampered = mustContain.some(str => !current.includes(str));
+      if (tampered) {
+        document.getElementById("error").style.display = "block";
+        document.getElementById("blocker").style.display = "flex";
+        console.warn("⚠️ Copyright has been tampered!");
+      }
     }
-  }
 
-  setInterval(checkTampering, 2000);
-</script>
-    </footer>
+    setInterval(checkTampering, 2000);
+  </script>
 
     <script src="script.js"></script>
 </body>
