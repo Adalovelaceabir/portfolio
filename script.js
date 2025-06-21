@@ -148,10 +148,3 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', animateOnScroll);
 });
-
-<script>
-  window.addEventListener("load", function () {
-    const spinners = document.querySelectorAll(".spinner-box");
-    spinners.forEach(spinner => spinner.style.display = "none");
-  });
-</script>
